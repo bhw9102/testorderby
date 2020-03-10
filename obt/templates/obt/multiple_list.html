@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<table>
+  {% for obts in obt_qs_types %}
+    <td>
+      <table>
+        <tr>
+          <th>V1</th>
+          <th>V2</th>
+          <th>V3</th>
+          <th>V4</th>
+        </tr>
+        {% for obt in obts %}
+          <tr>
+            <td>{{ obt.v1 }}</td>
+            <td>{{ obt.v2 }}</td>
+            <td>{{ obt.v3 }}</td>
+            <td>{{ obt.v4 }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </td>
+  {% endfor %}
+</table>
+
+</body>
+</html>
